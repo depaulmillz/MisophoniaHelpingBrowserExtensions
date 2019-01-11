@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		591906D821E858EB00E72490 /* NetflixMuteSafari.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 591906D721E858EB00E72490 /* NetflixMuteSafari.entitlements */; };
+		591906DA21E858EB00E72490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591906D921E858EB00E72490 /* AppDelegate.swift */; };
+		591906DD21E858EB00E72490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591906DB21E858EB00E72490 /* Main.storyboard */; };
+		591906DF21E858EB00E72490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591906DE21E858EB00E72490 /* ViewController.swift */; };
+		591906E121E858EB00E72490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591906E021E858EB00E72490 /* Assets.xcassets */; };
+		591906E821E858EB00E72490 /* NetflixMuteSafari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 591906E721E858EB00E72490 /* NetflixMuteSafari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		591906ED21E858EB00E72490 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591906EC21E858EB00E72490 /* Cocoa.framework */; };
+		591906F021E858EB00E72490 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591906EF21E858EB00E72490 /* SafariExtensionHandler.swift */; };
+		591906F221E858EB00E72490 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591906F121E858EB00E72490 /* SafariExtensionViewController.swift */; };
+		591906F521E858EB00E72490 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591906F321E858EB00E72490 /* SafariExtensionViewController.xib */; };
+		591906F821E858EB00E72490 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 591906F721E858EB00E72490 /* script.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		591906E921E858EB00E72490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 591906CC21E858EB00E72490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 591906E621E858EB00E72490;
+			remoteInfo = "NetflixMuteSafari Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5919070121E858EB00E72490 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				591906E821E858EB00E72490 /* NetflixMuteSafari Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		591906D421E858EB00E72490 /* NetflixMuteSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixMuteSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		591906D721E858EB00E72490 /* NetflixMuteSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetflixMuteSafari.entitlements; sourceTree = "<group>"; };
+		591906D921E858EB00E72490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		591906DC21E858EB00E72490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		591906DE21E858EB00E72490 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		591906E021E858EB00E72490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		591906E221E858EB00E72490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		591906E721E858EB00E72490 /* NetflixMuteSafari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NetflixMuteSafari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		591906EC21E858EB00E72490 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		591906EF21E858EB00E72490 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		591906F121E858EB00E72490 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		591906F421E858EB00E72490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		591906F621E858EB00E72490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		591906F721E858EB00E72490 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 0; lastKnownFileType = sourcecode.javascript; lineEnding = 0; path = script.js; sourceTree = "<group>"; usesTabs = 0; };
+		591906FB21E858EB00E72490 /* NetflixMuteSafari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetflixMuteSafari_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		591906D121E858EB00E72490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		591906E421E858EB00E72490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				591906ED21E858EB00E72490 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		591906CB21E858EB00E72490 = {
+			isa = PBXGroup;
+			children = (
+				591906D621E858EB00E72490 /* NetflixMuteSafari */,
+				591906EE21E858EB00E72490 /* NetflixMuteSafari Extension */,
+				591906EB21E858EB00E72490 /* Frameworks */,
+				591906D521E858EB00E72490 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		591906D521E858EB00E72490 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				591906D421E858EB00E72490 /* NetflixMuteSafari.app */,
+				591906E721E858EB00E72490 /* NetflixMuteSafari Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		591906D621E858EB00E72490 /* NetflixMuteSafari */ = {
+			isa = PBXGroup;
+			children = (
+				591906D721E858EB00E72490 /* NetflixMuteSafari.entitlements */,
+				591906D921E858EB00E72490 /* AppDelegate.swift */,
+				591906DB21E858EB00E72490 /* Main.storyboard */,
+				591906DE21E858EB00E72490 /* ViewController.swift */,
+				591906E021E858EB00E72490 /* Assets.xcassets */,
+				591906E221E858EB00E72490 /* Info.plist */,
+			);
+			path = NetflixMuteSafari;
+			sourceTree = "<group>";
+		};
+		591906EB21E858EB00E72490 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				591906EC21E858EB00E72490 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		591906EE21E858EB00E72490 /* NetflixMuteSafari Extension */ = {
+			isa = PBXGroup;
+			children = (
+				591906EF21E858EB00E72490 /* SafariExtensionHandler.swift */,
+				591906F121E858EB00E72490 /* SafariExtensionViewController.swift */,
+				591906F321E858EB00E72490 /* SafariExtensionViewController.xib */,
+				591906F621E858EB00E72490 /* Info.plist */,
+				591906F721E858EB00E72490 /* script.js */,
+				591906FB21E858EB00E72490 /* NetflixMuteSafari_Extension.entitlements */,
+			);
+			path = "NetflixMuteSafari Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		591906D321E858EB00E72490 /* NetflixMuteSafari */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5919070221E858EB00E72490 /* Build configuration list for PBXNativeTarget "NetflixMuteSafari" */;
+			buildPhases = (
+				591906D021E858EB00E72490 /* Sources */,
+				591906D121E858EB00E72490 /* Frameworks */,
+				591906D221E858EB00E72490 /* Resources */,
+				5919070121E858EB00E72490 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				591906EA21E858EB00E72490 /* PBXTargetDependency */,
+			);
+			name = NetflixMuteSafari;
+			productName = NetflixMuteSafari;
+			productReference = 591906D421E858EB00E72490 /* NetflixMuteSafari.app */;
+			productType = "com.apple.product-type.application";
+		};
+		591906E621E858EB00E72490 /* NetflixMuteSafari Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 591906FE21E858EB00E72490 /* Build configuration list for PBXNativeTarget "NetflixMuteSafari Extension" */;
+			buildPhases = (
+				591906E321E858EB00E72490 /* Sources */,
+				591906E421E858EB00E72490 /* Frameworks */,
+				591906E521E858EB00E72490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NetflixMuteSafari Extension";
+			productName = "NetflixMuteSafari Extension";
+			productReference = 591906E721E858EB00E72490 /* NetflixMuteSafari Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		591906CC21E858EB00E72490 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "dePaul Miller";
+				TargetAttributes = {
+					591906D321E858EB00E72490 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					591906E621E858EB00E72490 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 591906CF21E858EB00E72490 /* Build configuration list for PBXProject "NetflixMuteSafari" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 591906CB21E858EB00E72490;
+			productRefGroup = 591906D521E858EB00E72490 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				591906D321E858EB00E72490 /* NetflixMuteSafari */,
+				591906E621E858EB00E72490 /* NetflixMuteSafari Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		591906D221E858EB00E72490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				591906D821E858EB00E72490 /* NetflixMuteSafari.entitlements in Resources */,
+				591906E121E858EB00E72490 /* Assets.xcassets in Resources */,
+				591906DD21E858EB00E72490 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		591906E521E858EB00E72490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				591906F521E858EB00E72490 /* SafariExtensionViewController.xib in Resources */,
+				591906F821E858EB00E72490 /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		591906D021E858EB00E72490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				591906DF21E858EB00E72490 /* ViewController.swift in Sources */,
+				591906DA21E858EB00E72490 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		591906E321E858EB00E72490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				591906F221E858EB00E72490 /* SafariExtensionViewController.swift in Sources */,
+				591906F021E858EB00E72490 /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		591906EA21E858EB00E72490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 591906E621E858EB00E72490 /* NetflixMuteSafari Extension */;
+			targetProxy = 591906E921E858EB00E72490 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		591906DB21E858EB00E72490 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				591906DC21E858EB00E72490 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		591906F321E858EB00E72490 /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				591906F421E858EB00E72490 /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		591906FC21E858EB00E72490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		591906FD21E858EB00E72490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		591906FF21E858EB00E72490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "NetflixMuteSafari Extension/NetflixMuteSafari_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23246KKXR3;
+				INFOPLIST_FILE = "NetflixMuteSafari Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DSM.NetflixMuteSafari-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		5919070021E858EB00E72490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "NetflixMuteSafari Extension/NetflixMuteSafari_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23246KKXR3;
+				INFOPLIST_FILE = "NetflixMuteSafari Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DSM.NetflixMuteSafari-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		5919070321E858EB00E72490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NetflixMuteSafari/NetflixMuteSafari.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = NetflixMuteSafari/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.depaulmillz.NetflixMuteSafari;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		5919070421E858EB00E72490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NetflixMuteSafari/NetflixMuteSafari.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = NetflixMuteSafari/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.depaulmillz.NetflixMuteSafari;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		591906CF21E858EB00E72490 /* Build configuration list for PBXProject "NetflixMuteSafari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				591906FC21E858EB00E72490 /* Debug */,
+				591906FD21E858EB00E72490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		591906FE21E858EB00E72490 /* Build configuration list for PBXNativeTarget "NetflixMuteSafari Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				591906FF21E858EB00E72490 /* Debug */,
+				5919070021E858EB00E72490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5919070221E858EB00E72490 /* Build configuration list for PBXNativeTarget "NetflixMuteSafari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5919070321E858EB00E72490 /* Debug */,
+				5919070421E858EB00E72490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 591906CC21E858EB00E72490 /* Project object */;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Netflix Mute",
+  "description": "Mutes whistling and cheering for help with misophonia.",
+  "version": "1.0.1",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.netflix.com/watch/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
