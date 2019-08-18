@@ -1,0 +1,19 @@
+{
+  "name": "Hulu Mute",
+  "description": "Mutes Misophonia Triggers on Hulu",
+  "version": "1.1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.hulu.com/watch/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
