@@ -3,7 +3,8 @@
   "description": "Mutes Misophonia Triggers by using subtitles",
   "version": "1.1.1",
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "browser_action": {
     "default_icon": "muteoff.png",
