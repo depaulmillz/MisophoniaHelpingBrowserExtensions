@@ -1,11 +1,11 @@
-chrome.runtime.sendMessage({ "newIconPath": "muteon.png" });
 
 var callback = function (mutationlist, observer) {
   var process = function () {
     var docBody = document.body.innerHTML.toLowerCase();
     var whistleFound = docBody.search("whistl") >= 0;
     var cheeringFound = docBody.search("cheer") >= 0;
-    return whistleFound || cheeringFound;
+    var slurpFound = docBody.search("slurp") >= 0;
+    return whistleFound || cheeringFound || slurpFound;
   };
   if (process()) {
     var videoArray = document.getElementsByTagName("video");
