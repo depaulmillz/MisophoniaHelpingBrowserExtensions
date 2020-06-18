@@ -3,13 +3,9 @@ var toMatch = null;
 var callback = function (mutationlist, observer) {
   var process = function () {
     var docBody = document.getElementById("trackingForMute").innerText.toLowerCase();
-    //var whistleFound = docBody.search("whistl") >= 0;
-    //var cheeringFound = docBody.search("cheer") >= 0;
-    //var slurpFound = docBody.search("slurp") >= 0;
     if (toMatch) {
       for (i = 0; i < toMatch.length; i++) {
         if (docBody.search(toMatch[i]) >= 0) {
-          //console.log("Matched " + toMatch[i]);
           return true;
         }
       }
@@ -31,7 +27,6 @@ var callback = function (mutationlist, observer) {
 
 var interval = setInterval(function () {
   chrome.storage.local.get(['tomute'], function (result) {
-    //console.log(result.tomute);
     if (result.tomute != null && result.tomute != undefined) {
       toMatch = result.tomute.split("\t");
     }

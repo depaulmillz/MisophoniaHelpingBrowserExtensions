@@ -63,7 +63,7 @@ addbtn.onclick = function () {
             btn.appendChild(txt);
             btn.value = term;
             btn.onclick = function () {
-                alert(btn.value);
+                //alert(btn.value);
                 chrome.storage.local.get(['tomute'], function (results) {
                     var serialization2 = null
                     if (results.tomute) {
