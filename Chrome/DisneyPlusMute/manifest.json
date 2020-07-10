@@ -1,0 +1,28 @@
+{
+  "name": "Disney Plus Mute",
+  "description": "Mutes Misophonia Triggers by using subtitles",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.disneyplus.com/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
