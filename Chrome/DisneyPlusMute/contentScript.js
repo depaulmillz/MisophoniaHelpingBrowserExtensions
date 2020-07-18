@@ -1,5 +1,6 @@
 var toMatch = null;
 
+chrome.runtime.sendMessage({injected: false}, function(response) {});
 
 chrome.storage.local.get(['tomute'], function(result) {
   if (result.tomute != null && result.tomute != undefined) {
@@ -41,6 +42,14 @@ var interval = setInterval(function() {
                     }
                   }
                 }
+                /*document
+                    .getElementsByClassName('btm-media-overlays-container')[0]
+                    .click();
+                var btn = document.getElementsByClassName('mute-btn')[0];
+                while (btn == undefined) {
+                  btn = document.getElementsByClassName('mute-btn')[0];
+                }
+                btn.click();*/
               }
             }
           } catch (e) {
@@ -53,8 +62,9 @@ var interval = setInterval(function() {
       }
 
       if (injected) {
-        console.log('injected');
         clearInterval(interval);
+        chrome.runtime.sendMessage({injected: true}, function(response) {});
+        console.log('injected');
       }
 
       // activeCues[0].text.toLowerCase();
@@ -63,4 +73,4 @@ var interval = setInterval(function() {
       // console.log(toMatch);
     }
   }
-}, 500);
+}, 1000);
