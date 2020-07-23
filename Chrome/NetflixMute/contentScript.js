@@ -44,7 +44,7 @@ var interval = setInterval(function() {
       const observer = new MutationObserver(callback);
       observer.observe(targetNode, config);
       clearInterval(interval);
-      chrome.runtime.sendMessage({injected: false}, function(response) {});
+      chrome.runtime.sendMessage({injected: true}, function(response) {});
     }
   }
 }, 1000);
