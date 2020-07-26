@@ -16,43 +16,66 @@ var interval = setInterval(function() {
         document.getElementsByTagName('video')[0] != undefined) {
       const targetNode = document.getElementsByTagName('video')[0];
 
+      try {
+        var cues = targetNode.textTracks[0].cues;
+        var currentCue = targetNode.textTracks[0].activeCues[0];
+        var idx = 0;
+        for (; idx < cues.length; idx++) {
+          if (currentCue == cues[idx]) {
+            break;
+          }
+        }
+        if (idx == cues.length) {
+          console.log('Reset idx');
+          idx = 0;
+        }
+        var docBody = cues[idx].text.toLowerCase();
+        if (currentCue != undefined) {
+          docBody += currentCue.text.toLowerCase();
+        }
+        if (toMatch) {
+          for (i = 0; i < toMatch.length; i++) {
+            if (docBody.search(toMatch[i]) >= 0) {
+              targetNode.muted = true;
+              console.log('muted');
+              break;
+            }
+          }
+        }
+      } catch (e) {
+        console.log(e)
+      }
 
       try {
         targetNode.textTracks[0].oncuechange = function() {
-          var match = false;
-
           try {
-            var docBody =
-                targetNode.textTracks[0].activeCues[0].text.toLowerCase();
+            var cues = targetNode.textTracks[0].cues;
+            var currentCue = targetNode.textTracks[0].activeCues[0];
+            var docBody = currentCue.text.toLowerCase();
+
+            var idx = 0;
+            for (; idx < cues.length; idx++) {
+              if (currentCue == cues[idx]) {
+                break;
+              }
+            }
+            if (idx == cues.length) {
+              console.log('Reset idx');
+              idx = 0;
+            }
+
+            docBody = docBody + cues[idx].text.toLowerCase();
             if (toMatch) {
               for (i = 0; i < toMatch.length; i++) {
                 if (docBody.search(toMatch[i]) >= 0) {
-                  match = true;
+                  targetNode.muted = true;
+                  console.log('muted');
                   break;
                 }
               }
-              if (match) {
-                var videoArray = document.getElementsByTagName('video');
-                if (videoArray != undefined) {
-                  var videoZero = videoArray[0];
-                  if (videoZero !== undefined) {
-                    if (videoZero.muted !== undefined) {
-                      console.log('Muted');
-                      videoZero.muted = true;
-                    }
-                  }
-                }
-                /*document
-                    .getElementsByClassName('btm-media-overlays-container')[0]
-                    .click();
-                var btn = document.getElementsByClassName('mute-btn')[0];
-                while (btn == undefined) {
-                  btn = document.getElementsByClassName('mute-btn')[0];
-                }
-                btn.click();*/
-              }
             }
           } catch (e) {
+            console.log(e);
           }
         };
         injected = true;
