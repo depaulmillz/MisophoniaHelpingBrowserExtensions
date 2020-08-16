@@ -18,11 +18,16 @@ var callback = function(mutationlist, observer) {
     return false;
   };
   if (process()) {
-    if (document.getElementsByClassName('controls__volume-button--mute')
-            .length == 0) {
-      var ctrlBtn =
-          document.getElementsByClassName('controls__volume-button')[0];
-      ctrlBtn.click();
+    console.log('process returned true');
+    try {
+      var playerButton = document.getElementsByClassName('VolumeControl')[0]
+                             .getElementsByClassName('PlayerButton')[0];
+      console.log(playerButton.getAttribute('aria-label').toLowerCase());
+      if (playerButton.getAttribute('aria-label').toLowerCase() == 'mute') {
+        playerButton.click();
+      }
+    } catch (e) {
+      console.log(e);
     }
   }
 };
