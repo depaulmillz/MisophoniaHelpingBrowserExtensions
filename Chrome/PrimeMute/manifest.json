@@ -1,7 +1,7 @@
 {
   "name": "Prime Mute",
   "description": "Mutes Misophonia Triggers by using subtitles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "permissions": [
     "tabs",
     "storage"

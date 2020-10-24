@@ -34,17 +34,16 @@ var interval = setInterval(function() {
       toMatch = result.tomute.split('\t');
     }
   });
-  if (window.location.pathname.search('b') >= 0) {
-    if (document.getElementsByClassName('webPlayerUIContainer')[0] != undefined) {
-      document.getElementsByClassName('webPlayerUIContainer')[0].setAttribute(
-          'id', 'trackingForMute');
-      const targetNode = document.getElementById('trackingForMute');
-      console.log('target node ' + targetNode);
-      const config = {attributes: true, childList: true, subtree: true};
-      const observer = new MutationObserver(callback);
-      observer.observe(targetNode, config);
-      clearInterval(interval);
-      chrome.runtime.sendMessage({injected: true}, function(response) {});
-    }
+  if (document.getElementsByClassName('webPlayerUIContainer')[0] != undefined) {
+    document.getElementsByClassName('webPlayerUIContainer')[0].setAttribute(
+        'id', 'trackingForMute');
+    const targetNode = document.getElementById('trackingForMute');
+    console.log('target node ' + targetNode);
+    const config = {attributes: true, childList: true, subtree: true};
+    const observer = new MutationObserver(callback);
+    observer.observe(targetNode, config);
+    clearInterval(interval);
+    chrome.runtime.sendMessage({injected: true}, function(response) {});
   }
+
 }, 1000);
