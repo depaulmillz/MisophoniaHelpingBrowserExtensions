@@ -1,0 +1,29 @@
+{
+  "name": "HBO Max Mute",
+  "description": "Mutes Misophonia Triggers by using subtitles",
+  "version": "1.0.1",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "muteoff.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://play.hbomax.com/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
