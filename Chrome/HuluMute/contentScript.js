@@ -39,9 +39,9 @@ var interval = setInterval(function() {
     }
   });
   if (window.location.pathname.search('watch') >= 0) {
-    if (document.getElementsByClassName('closed-caption-container')[0] !=
+    if (document.getElementsByClassName('ClosedCaption')[0] !=
         undefined) {
-      document.getElementsByClassName('closed-caption-container')[0]
+      document.getElementsByClassName('ClosedCaption')[0]
           .setAttribute('id', 'trackingForMute');
       const targetNode = document.getElementById('trackingForMute');
       console.log('target node ' + targetNode);
