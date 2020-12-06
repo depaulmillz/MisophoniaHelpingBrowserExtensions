@@ -1,7 +1,7 @@
 {
   "name": "HBO Max Mute",
   "description": "Mutes Misophonia Triggers by using subtitles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "permissions": [
     "tabs",
     "storage"
