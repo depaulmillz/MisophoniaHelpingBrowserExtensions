@@ -4,6 +4,12 @@ chrome.runtime.sendMessage({injected: false}, function(response) {
   console.log('off');
 });
 
+chrome.storage.local.get(['tomute'], function(result) {
+  if (result.tomute != null && result.tomute != undefined) {
+    toMatch = result.tomute.split('\t');
+  }
+});
+
 var callback = function(mutationlist, observer) {
   var process = function() {
     var docBody =
@@ -33,11 +39,6 @@ var callback = function(mutationlist, observer) {
 };
 
 var interval = setInterval(function() {
-  chrome.storage.local.get(['tomute'], function(result) {
-    if (result.tomute != null && result.tomute != undefined) {
-      toMatch = result.tomute.split('\t');
-    }
-  });
   if (window.location.pathname.search('watch') >= 0) {
     if (document.getElementsByClassName('ClosedCaption')[0] !=
         undefined) {

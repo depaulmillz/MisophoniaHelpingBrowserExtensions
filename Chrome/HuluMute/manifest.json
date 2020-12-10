@@ -1,7 +1,7 @@
 {
   "name": "Hulu Mute",
   "description": "Mutes Misophonia Triggers on Hulu",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "permissions": [
     "tabs",
     "storage"

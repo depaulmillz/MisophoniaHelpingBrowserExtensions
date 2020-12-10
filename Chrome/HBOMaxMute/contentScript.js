@@ -1,5 +1,11 @@
 var toMatch = null;
 
+chrome.storage.local.get(['tomute'], function(result) {
+  if (result.tomute != null && result.tomute != undefined) {
+    toMatch = result.tomute.split('\t');
+  }
+});
+
 chrome.runtime.sendMessage({injected: false}, function(response) {});
 
 chrome.runtime.onMessage.addListener(
@@ -8,12 +14,14 @@ chrome.runtime.onMessage.addListener(
     if(request.message === "reload" ) {
       console.log("Reload");
       chrome.runtime.sendMessage({injected: false}, function(response) {});
+
+      chrome.storage.local.get(['tomute'], function(result) {
+        if (result.tomute != null && result.tomute != undefined) {
+          toMatch = result.tomute.split('\t');
+        }
+      });
+
       var interval = setInterval(function() {
-        chrome.storage.local.get(['tomute'], function(result) {
-          if (result.tomute != null && result.tomute != undefined) {
-            toMatch = result.tomute.split('\t');
-          }
-        });
         if (document.getElementsByTagName('video')[0] != undefined) {
           try {
             document.getElementsByTagName('video')[0].parentElement.parentElement.parentElement.setAttribute(
@@ -76,11 +84,6 @@ var callback = function(mutationlist, observer) {
 };
 
 var interval = setInterval(function() {
-  chrome.storage.local.get(['tomute'], function(result) {
-    if (result.tomute != null && result.tomute != undefined) {
-      toMatch = result.tomute.split('\t');
-    }
-  });
   if (document.getElementsByTagName('video')[0] != undefined) {
     try {
       document.getElementsByTagName('video')[0].parentElement.parentElement.parentElement.setAttribute(
