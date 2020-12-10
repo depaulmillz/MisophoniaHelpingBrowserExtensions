@@ -53,6 +53,19 @@ var interval = setInterval(function() {
       chrome.runtime.sendMessage({injected: true}, function(response) {
         console.log('injected')
       });
+    } else if (document.getElementsByClassName('closed-caption-container')[0] !=
+    undefined) {
+      document.getElementsByClassName('closed-caption-container')[0]
+          .setAttribute('id', 'trackingForMute');
+      const targetNode = document.getElementById('trackingForMute');
+      console.log('target node ' + targetNode);
+      const config = {attributes: true, childList: true, subtree: true};
+      const observer = new MutationObserver(callback);
+      observer.observe(targetNode, config);
+      clearInterval(interval);
+      chrome.runtime.sendMessage({injected: true}, function(response) {
+        console.log('injected')
+      });
     }
   }
 }, 1000);
