@@ -8,6 +8,28 @@ chrome.storage.local.get(['tomute'], function(result) {
   }
 });
 
+var callback = function(mutationlist, observer) {
+  var clients = document.getElementsByClassName('btm-media-clients');
+  if(clients != undefined) {
+    for(var i = 0; i < clients.length; i++) {
+      try {
+        var text = clients[i].innerText.toLowerCase();
+        if (toMatch) {
+          for (i = 0; i < toMatch.length; i++) {
+            if (text.search(toMatch[i]) >= 0) {
+              document.getElementsByTagName('video')[0].muted = true;
+              console.log('muted');
+              break;
+            }
+          }
+        }
+      } catch(err) {
+        console.log(err);
+      }
+    }
+  }
+};
+
 var injected = false;
 
 var interval = setInterval(function() {
@@ -82,6 +104,17 @@ var interval = setInterval(function() {
       } catch (err) {
         console.log('Unable to get textTracks');
         injected = false;
+
+        var clients = document.getElementsByClassName('btm-media-clients');
+        if(clients != undefined) {
+          for(var i = 0; i < clients.length; i++) {
+            const config = {attributes: true, childList: true, subtree: true};
+            const observer = new MutationObserver(callback);
+            observer.observe(clients[i], config);      
+            injected = true;
+          }
+        }
+
       }
 
       if (injected) {
